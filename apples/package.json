@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "cypress": "^12.16.0"
+  },
+  "dependencies": {
+    "@antiadmin/anticaptchaofficial": "^1.0.39",
+    "ocr-space-api-wrapper": "^2.3.0",
+    "tesseract.js": "^4.1.1"
+  }
+}

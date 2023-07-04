@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+    <script type="module" src="./captcha.js">
+        const tesseract = require('tesseract');
+
+        tesseract.recognize(
+            'https://tesseract.projectnaptha.com/img/eng_bw.png',
+            'eng',
+            { logger: m => console.log(m) }
+        ).then(({ data: { text } }) => {
+            console.log(text);
+        })
+    </script>
+  </body>
+</html>
